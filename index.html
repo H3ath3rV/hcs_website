@@ -1,0 +1,2734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="https://formsubmit.co">
+    <link rel="preconnect" href="https://formsubmit.co" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="His Church School in Pinetown offers faith-based education for grades 1-12. CAPS curriculum, NSC exam centre, 15:1 student ratio. Raising decision makers, world shakers & challenge takers since 2009.">
+    <meta name="keywords" content="Christian school, Pinetown, KZN, independent school, CAPS curriculum, NSC exam centre, faith-based education, His Church School">
+    
+    <!-- Enhanced Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="His Church School">
+    <meta property="og:title" content="His Church School - Faith-Based Education in Pinetown, KZN">
+    <meta property="og:description" content="Independent Christian school in Pinetown offering grades 1-12 with CAPS-aligned curriculum. Raising decision makers, world shakers & challenge takers.">
+    <meta property="og:image" content="https://www.hischurchschool.co.za/images/hcs_logo.jpg">
+    <meta property="og:url" content="https://www.hischurchschool.co.za">
+    <meta property="fb:pages" content="hischurchschool">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="His Church School - Faith-Based Education">
+    <meta name="twitter:description" content="Independent Christian school in Pinetown offering grades 1-12 with CAPS curriculum.">
+    <meta name="twitter:image" content="https://www.hischurchschool.co.za/images/hcs_logo.jpg">
+    
+    <title>His Church School - Home | Faith-Based Education in Pinetown, KZN</title>
+    <meta name="theme-color" content="#09243f">
+    <meta name="format-detection" content="telephone=yes">
+    <link rel="icon" type="image/jpeg" href="images/hcs_logo.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- DNS Prefetch for faster font loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" as="image" href="images/hcs_logo.jpg">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #09243f;
+            --accent-gold: #c89b5d;
+            --accent-red: #cf3b31;
+            --light-bg: #f8f9fa;
+            --text-dark: #333;
+            --text-light: #666;
+            --header-height: 100px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            background: #222;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: #222;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            z-index: 999;
+            background: var(--accent-gold);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            left: 10px;
+            top: 10px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        *:focus-visible {
+            outline: 3px solid var(--accent-gold);
+            outline-offset: 2px;
+        }
+
+        button:focus-visible,
+        a:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible {
+            outline: 3px solid var(--accent-gold);
+            outline-offset: 2px;
+        }
+
+        *:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        header {
+            background: var(--primary-blue);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100px;
+            transition: height 0.3s ease;
+        }
+
+        /* Ensure content starts below fixed header */
+        main {
+            margin-top: var(--header-height);
+        }
+
+        #hero,
+        #welcome,
+        #gallery,
+        #stats,
+        #values,
+        #testimonials,
+        #application,
+        #contact {
+            scroll-margin-top: var(--header-height);
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-section a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo-section a:hover {
+            opacity: 0.9;
+        }
+
+        /* Comprehensive widow and orphan prevention */
+        h1, h2, h3, h4, h5, h6 {
+            text-wrap: balance;
+            hyphens: none;
+            -webkit-hyphens: none;
+            widows: 2;
+            orphans: 2;
+        }
+
+        .gallery-header h2,
+        .values-header h2,
+        .testimonials-header h2,
+        .application-header h2 {
+            max-width: 30em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            text-wrap: pretty;
+            max-width: 75ch;
+            hyphens: none;
+            -webkit-hyphens: none;
+            -moz-hyphens: none;
+            -ms-hyphens: none;
+            overflow-wrap: break-word;
+            widows: 2;
+            orphans: 2;
+        }
+
+        .testimonial-text {
+            text-wrap: pretty;
+            max-width: 60ch;
+            margin-left: auto;
+            margin-right: auto;
+            widows: 3;
+            orphans: 3;
+        }
+
+        .stat-label,
+        .info-item-content p,
+        .contact-item p {
+            text-wrap: balance;
+        }
+
+        .value-card p,
+        .section-subtitle,
+        .testimonial-role,
+        .testimonial-author {
+            text-wrap: balance;
+            widows: 2;
+            orphans: 2;
+        }
+
+        .gallery-header p,
+        .values-header p,
+        .testimonials-header p {
+            max-width: 65ch;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Center application header paragraph */
+        .application-header p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .school-badge {
+            height: 80px;
+            width: auto;
+            transition: height 0.3s ease;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 8px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: none;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .get-in-touch-btn {
+            background: var(--accent-gold);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .get-in-touch-btn:hover {
+            background: #b38950;
+            transform: translateY(-2px);
+            box-shadow: none;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            padding: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            position: relative;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: white;
+            margin: 5px auto;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .menu-toggle:hover span {
+            background: var(--accent-gold);
+        }
+
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            backdrop-filter: blur(2px);
+        }
+
+        .mobile-menu-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 320px;
+            height: 100%;
+            background: var(--primary-blue);
+            z-index: 2000;
+            padding: 30px;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+        }
+
+        .mobile-menu.active {
+            display: block;
+            right: 0;
+        }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            padding: 0;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+            line-height: 1;
+        }
+
+        .mobile-menu-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .mobile-menu nav ul {
+            flex-direction: column;
+            gap: 0;
+            margin-top: 60px;
+            align-items: stretch;
+        }
+
+        .mobile-menu nav li {
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .mobile-menu nav li:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu nav a {
+            display: block;
+            padding: 20px 0;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+
+        .mobile-menu .get-in-touch-btn {
+            margin-top: 15px;
+            width: 100%;
+            justify-content: center;
+            padding: 15px 24px;
+        }
+
+        #hero {
+            height: calc(100vh - var(--header-height));
+            /* Fallback for browsers that support CSS custom properties */
+            height: calc((var(--vh, 1vh) * 100) - var(--header-height));
+            min-height: 0;
+            max-height: none;
+            position: relative;
+            margin-top: 0;
+            padding-top: 0;
+            width: 100vw;                          /* full-bleed width */
+            margin-left: calc(50% - 50vw);         /* cancel any parent padding */
+            overflow: hidden; /* CRITICAL */
+            background: #000; /* Fallback */
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            animation: heroSlide 15s infinite;
+            will-change: opacity, transform;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
+
+        /* Single video slide overrides */
+        .hero-video-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1;
+            will-change: opacity, transform;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            background: #000 url('images/hero1.jpg') center center;
+            background-size: cover;
+        }
+
+        /* Base styles for both videos */
+        .hero-video video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            border: 0;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        /* Desktop video: show on desktop/tablet, hide on mobile */
+        .hero-video-desktop {
+            display: block;
+        }
+
+        /* Mobile video: hide on desktop, show on mobile */
+        .hero-video-mobile {
+            display: none;
+        }
+
+
+        /* Carousel animations removed - single video only */
+
+        /* Full overlay for text readability */
+        .hero-slide::after,
+        .hero-video-slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .tag-line {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            z-index: 10;
+            width: 90%;
+            max-width: 1000px;
+            animation: fadeInUp 1s ease-out;
+            padding: 0 20px;
+        }
+
+        .tag-line, .tag-line * {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .hero-actions {
+            margin-top: 22px;
+            display: inline-flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 22px;
+            border-radius: 999px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        /* Primary CTA - ADMISSIONS */
+        .hero-cta.primary {
+            background: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            color: white;
+        }
+
+        .hero-cta.primary:hover { 
+            background: #b38950;
+            border-color: #b38950;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(200, 155, 93, 0.3);
+        }
+
+        /* Secondary CTA - CONTACT US */
+        .hero-cta.secondary {
+            background: transparent;
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+        }
+
+        .hero-cta.secondary:hover { 
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .hero-cta svg { width: 18px; height: 18px; fill: currentColor; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .tag-line h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 0;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .tag-line p {
+            font-size: 1.1rem;
+            font-weight: 400;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            color: white;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 15px auto 0;
+        }
+
+        /* Hero dots removed - single video only */
+
+        /* Progress bar removed - single video only */
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            opacity: 0.8;
+            animation: bounce 2s infinite;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .scroll-indicator:hover { opacity: 1; }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .scroll-indicator svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));
+        }
+
+        /* Hero dot styles removed - single video only */
+
+        #welcome {
+            padding: 70px 0;
+            background: white;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        #welcome .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 80px;
+        }
+
+        .welcome-image {
+            width: 45%;
+            flex-shrink: 0;
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+            align-self: stretch;
+            min-height: 400px;
+        }
+
+        .welcome-image.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .welcome-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .welcome-content {
+            flex: 1;
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+            text-align: left;
+        }
+
+        .welcome-content.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .welcome-content p {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .section-subtitle {
+            color: var(--accent-gold);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+        }
+
+        h2 strong {
+            color: var(--accent-red);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent-gold);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #b38950;
+            transform: translateY(-3px);
+            box-shadow: none;
+        }
+
+        .mobile-break { display: none; }
+        .tablet-break { display: none; }
+
+        #gallery {
+            padding: 70px 0;
+            background: var(--light-bg);
+        }
+
+        .gallery-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 350px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: none;
+            will-change: opacity;
+            backface-visibility: hidden;
+        }
+
+        .gallery-item.visible {
+            opacity: 1;
+            transform: none;
+            will-change: auto;
+        }
+
+        .gallery-item:hover {
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.25s ease;
+            will-change: transform;
+            backface-visibility: hidden;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.02);
+        }
+
+        #stats {
+            background: var(--primary-blue);
+            color: white;
+            padding: 50px 0 80px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            text-align: center;
+        }
+
+        .stat-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .stat-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin: 0 0 10px 0;
+            font-family: 'Playfair Display', serif;
+            min-height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center;
+            will-change: transform, opacity;
+            /* Smooth text rendering */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            /* Prevent layout shifts */
+            font-variant-numeric: tabular-nums;
+            /* Smooth transitions */
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
+
+        .stat-number.counting {
+            color: var(--accent-gold);
+        }
+
+        .stat-number.complete {
+            transform: scale(1);
+        }
+
+        /* Smooth fade-in animation for stat items */
+        .stat-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stat-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+            padding: 0;
+        }
+
+        #values {
+            padding: 70px 0;
+            background: white;
+        }
+
+        .values-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .value-card {
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(30px);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            will-change: transform;
+            backface-visibility: hidden;
+        }
+
+        .value-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            will-change: auto;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.20);
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-gold), #d4a866);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+        }
+
+        .value-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        #testimonials {
+            padding: 70px 0;
+            background: var(--light-bg);
+        }
+
+        .testimonials-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .testimonials-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 40px 40px 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 400px;
+            width: 100%;
+            min-width: 0;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 25px;
+        }
+
+        .testimonial-stars svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--accent-gold);
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            position: relative;
+            flex-grow: 1;
+            widows: 3;
+            orphans: 3;
+        }
+
+        .testimonial-text .quote {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            font-family: Georgia, serif;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 0;
+            vertical-align: -0.2em;
+            margin: 0 2px;
+            display: inline-block;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+            margin-bottom: 3px;
+            margin-top: auto;
+            max-width: 60ch;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial-role {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin: 0;
+            max-width: 60ch;
+            margin-left: auto;
+            margin-right: auto;
+            text-wrap: balance;
+        }
+
+        #application {
+            background: linear-gradient(135deg, #0a2540 0%, #133a5e 100%);
+            color: white;
+            padding: 70px 0;
+        }
+
+        .application-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .application-header h2 {
+            color: white;
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .application-header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+
+        .application-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: stretch;
+        }
+
+        .application-info {
+            background: rgba(255,255,255,0.05);
+            padding: 50px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .application-info h3 {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-item svg {
+            color: var(--accent-gold);
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            margin-top: 2px;
+        }
+
+        .info-item-content h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .info-item-content p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+            margin: 0;
+            max-width: none;
+        }
+
+        .application-form {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .application-form h3 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(200, 155, 93, 0.1);
+        }
+
+        /* Show error state only when JS adds .is-invalid */
+        .form-group input.is-invalid,
+        .form-group select.is-invalid,
+        .form-group textarea.is-invalid {
+            border-color: var(--accent-red);
+            background-color: #fff5f5;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .form-row .form-group {
+            margin-bottom: 0;
+        }
+
+        .submit-btn {
+            background: var(--accent-gold);
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .submit-btn:hover {
+            background: #b38950;
+            transform: translateY(-2px);
+            box-shadow: none;
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn.loading::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            right: 20px;
+            margin-top: -8px;
+            border: 2px solid white;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spinner 0.6s linear infinite;
+        }
+
+        @keyframes spinner {
+            to { transform: rotate(360deg); }
+        }
+
+        #contact {
+            background: #222;
+            color: white;
+            padding: 70px 0 0;
+        }
+
+        .contact-grid {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0 50px 0;
+            align-items: start;
+            flex-wrap: wrap;
+        }
+
+        .contact-section {
+            text-align: left;
+            flex: 0 0 auto;
+        }
+
+        .contact-section h3 {
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-size: 1.5rem;
+            text-align: left;
+        }
+
+        .contact-item {
+            margin-bottom: 25px;
+        }
+
+        .contact-item h4 {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .contact-item p {
+            color: rgba(255,255,255,0.8);
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .contact-item a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-gold);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+            background: #b38950;
+            box-shadow: none;
+        }
+
+        .social-links svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 40px 0;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            background: #222;
+        }
+
+        footer p {
+            margin: 0 auto;
+        }
+
+        @media (max-width: 968px) {
+            .header-wrapper {
+                padding: 0 30px;
+                height: 80px;
+            }
+            :root { --header-height: 80px; }
+
+            main {
+                margin-top: 80px;
+            }
+
+            .header-right nav {
+                display: none;
+            }
+
+            .header-right .get-in-touch-btn {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .tag-line h2 {
+                font-size: 2.2rem;
+                white-space: normal;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            #welcome .container {
+                flex-direction: column;
+                gap: 50px;
+                align-items: stretch;
+            }
+
+            .welcome-content {
+                text-align: center;
+                width: 100%;
+            }
+
+            .welcome-image {
+                width: 100%;
+                height: 350px;
+                min-height: 350px;
+            }
+
+            .welcome-content p { 
+            margin-left: auto; 
+            margin-right: auto; 
+            hyphens: none;
+            -webkit-hyphens: none;
+            -moz-hyphens: none;
+            -ms-hyphens: none;
+        }
+
+            .application-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-bottom: 25px;
+            }
+
+            .testimonials-container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                align-items: stretch;
+            }
+
+            .contact-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .contact-section:last-child {
+                grid-column: auto;
+            }
+
+            #hero,
+            #welcome,
+            #gallery,
+            #stats,
+            #values,
+            #testimonials,
+            #application,
+            #contact {
+                scroll-margin-top: 80px;
+            }
+        }
+
+        @media (min-width: 969px) and (max-width: 1100px) {
+            .header-wrapper {
+                padding: 0 30px;
+            }
+            .header-right {
+                gap: 20px;
+            }
+            nav ul {
+                gap: 20px;
+            }
+            nav a {
+                font-size: 0.9rem;
+            }
+            .get-in-touch-btn {
+                padding: 10px 20px;
+            }
+            .tag-line h2 {
+                white-space: normal;
+                font-size: 3rem;
+                line-height: 1.2;
+            }
+            .tag-line { max-width: 70%; }
+        }
+
+        @media (min-width: 1101px) {
+            .tag-line { max-width: 60%; }
+        }
+
+        @media (min-width: 969px) {
+            .tag-line {
+                top: auto;
+                bottom: 60px;
+                transform: translateX(-50%);
+                width: 100%;
+                max-width: 1200px;
+                padding: 0 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-video {
+                overflow: hidden;
+                background: #000;
+            }
+            
+            #hero {
+                overflow: hidden;
+                background: #000;
+            }
+            
+            /* Ensure hero slide has no gaps */
+            .hero-video-slide {
+                overflow: hidden;
+            }
+            
+            /* Show mobile video, hide desktop video */
+            .hero-video-desktop {
+                display: none;
+            }
+            
+            .hero-video-mobile {
+                display: block;
+            }
+            
+            /* Hide scroll indicator on mobile if needed */
+            .scroll-indicator {
+                display: none;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+                min-height: 3rem;
+            }
+            .header-wrapper {
+                padding: 0 20px;
+                height: 70px;
+            }
+            :root { --header-height: 70px; }
+
+            main {
+                margin-top: 70px;
+            }
+
+            .mobile-break {
+                display: inline;
+            }
+
+            .footer-goal {
+                white-space: nowrap;
+            }
+
+            .school-badge {
+                height: 60px;
+            }
+
+            .tag-line {
+                bottom: 60px;
+            }
+
+            .tag-line::before { 
+                content: none; 
+            }
+
+            .tag-line h2 {
+                font-size: 2.2rem;
+                white-space: normal;
+                line-height: 1.15;
+                margin-bottom: 0;
+                text-wrap: balance;
+                overflow-wrap: break-word;
+                hyphens: none;
+                -webkit-hyphens: none;
+            }
+
+            .tag-line p {
+                display: none;
+            }
+
+            .hero-actions { gap: 14px; margin-top: 18px; }
+            .hero-cta { padding: 10px 18px; font-weight: 700; }
+            .hero-cta.secondary { border-width: 2px; }
+
+            .hero-slide::after,
+            .hero-video-slide::after {
+                background: 
+                    linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 100%);
+            }
+
+            .welcome-content p,
+            .value-card p,
+            .testimonial-text,
+            .info-item-content p {
+                text-wrap: pretty;
+                hyphens: none;
+                -webkit-hyphens: none;
+                widows: 2;
+                orphans: 2;
+            }
+
+            /* Hero dots removed - single video only */
+
+            .welcome-image {
+                height: 300px;
+                min-height: 300px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* keep indicator visible on mobile */
+
+            .application-form,
+            .application-info {
+                padding: 30px 20px;
+            }
+
+            .info-item {
+                border-bottom: none;
+                padding: 15px 0;
+                margin: 15px 0;
+            }
+
+            .testimonials-container {
+                grid-template-columns: 1fr;
+                align-items: stretch;
+            }
+
+            .testimonial {
+                padding: 30px 25px 25px 25px;
+                min-height: auto;
+            }
+
+            .contact-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .contact-section:last-child {
+                grid-column: auto;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 16px;
+            }
+
+            #hero,
+            #welcome,
+            #gallery,
+            #stats,
+            #values,
+            #testimonials,
+            #application,
+            #contact {
+                scroll-margin-top: 65px;
+            }
+
+            #hero {
+                height: calc(100vh - var(--header-height));
+                min-height: 0;
+                max-height: none;
+                padding-top: 0;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+            .header-wrapper {
+                padding: 0 15px;
+                height: 65px;
+            }
+            :root { --header-height: 65px; }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .menu-toggle {
+                width: 36px;
+                height: 36px;
+            }
+
+            .menu-toggle span {
+                width: 24px;
+                height: 2.5px;
+                margin: 4px auto;
+            }
+
+            .school-badge {
+                height: 55px;
+            }
+
+            .tag-line h2 {
+                font-size: 1.8rem;
+            }
+
+            .tag-line p {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .value-card {
+                padding: 30px 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .application-header h2 {
+                font-size: 2rem;
+            }
+
+            .get-in-touch-btn {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            #hero { height: calc(100vh - var(--header-height)); padding-top: 0; }
+        }
+
+        /* note: loading=lazy is set on individual <img> tags directly */
+    </style>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "His Church School",
+      "url": "https://www.hischurchschool.co.za",
+      "logo": "https://www.hischurchschool.co.za/images/hcs_logo.jpg",
+      "description": "Independent Christian school in Pinetown offering grades 1-12 with CAPS-aligned curriculum. Raising decision makers, world shakers & challenge takers.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "13 Drake Road, Cowies Hill Park",
+        "addressLocality": "Pinetown",
+        "addressRegion": "KZN",
+        "postalCode": "3610",
+        "addressCountry": "ZA"
+      },
+      "telephone": "+27317016211",
+      "email": "secretary@hischurchschool.co.za",
+      "foundingDate": "2009",
+      "sameAs": [
+        "https://www.facebook.com/hischurchschool/",
+        "https://www.instagram.com/hischurch/",
+        "https://www.youtube.com/@HisChurchTV"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    
+    <header role="banner">
+        <div class="header-wrapper">
+            <div class="logo-section">
+                <a href="#hero" aria-label="His Church School Home">
+                    <img src="images/hcs_logo.jpg" alt="His Church School Pinetown - Christian Education Logo" class="school-badge">
+                </a>
+            </div>
+            
+            <div class="header-right">
+                <nav role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="#welcome">About Us</a></li>
+                        <li><a href="#gallery">Our Community</a></li>
+                        <li><a href="#contact">Get In Touch</a></li>
+                    </ul>
+                </nav>
+                <a href="#application" class="get-in-touch-btn">Apply Now</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close mobile menu">&times;</button>
+        <nav aria-label="Mobile navigation">
+            <ul>
+                <li><a href="#welcome" class="mobile-menu-link">About Us</a></li>
+                <li><a href="#gallery" class="mobile-menu-link">Our Community</a></li>
+                <li><a href="#contact" class="mobile-menu-link">Get In Touch</a></li>
+            </ul>
+        </nav>
+        <a href="#application" class="get-in-touch-btn mobile-menu-link">Apply Now</a>
+    </div>
+
+    <main id="main-content" role="main">
+        <section id="hero">
+            <!-- Video hero - Facebook embed -->
+            <div class="hero-slide hero-video-slide" aria-label="Hero video">
+                <div class="hero-video" aria-hidden="true">
+                    <!-- Desktop/Tablet Video (768px and above) -->
+                    <video 
+                        class="hero-video-desktop"
+                        src="images/hero_video_1920x1080.mp4" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline 
+                        preload="metadata"
+                        aria-label="Hero background video">
+                    </video>
+                    
+                    <!-- Mobile Video (below 768px) -->
+                    <video 
+                        class="hero-video-mobile"
+                        src="images/hero_video_mobile.mp4" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline 
+                        preload="metadata"
+                        aria-label="Hero background video">
+                    </video>
+
+                </div>
+                <div class="tag-line">
+                    <h2>Rooted in Faith, Growing in Purpose</h2>
+                    <div class="hero-actions">
+                        <a href="#application" class="hero-cta primary">Apply Now</a>
+                        <a href="#contact" class="hero-cta secondary">Contact Us</a>
+                </div>
+            </div>
+                </div>
+            
+            <!-- Progress bar removed -->
+
+            
+        </section>
+
+        <section id="welcome">
+            <div class="container">
+                <div class="welcome-image">
+                    <img src="images/welcome.jpg" alt="Happy His Church School students in navy uniforms smiling together at Pinetown campus" loading="lazy">
+                </div>
+                
+                <div class="welcome-content">
+                    <div class="section-subtitle">Welcome to</div>
+                    <h2 style="color: var(--primary-blue);">His Church <strong style="color: var(--primary-blue);">School</strong></h2>
+                    <p>We provide a Christ-centered education that nurtures the whole child — spiritually, academically, socially, and physically.</p>
+                    <br>
+                    <p>Our dedicated teachers create a vibrant learning environment where students excel academically while developing strong Christian character and values.</p>
+                    <br>
+                    <p>We believe every child is uniquely created by God with special gifts, and our mission is to help each one discover and develop their potential in a safe, supportive environment.</p>
+                    <a href="#values" class="cta-button">Learn More About Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="container">
+                <div class="gallery-header">
+                    <div class="section-subtitle">Our Community</div>
+                    <h2>Life at His Church School</h2>
+                    <p>Experience the joy, learning, and fellowship that define our vibrant school community.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/academic.jpg" alt="His Church School student conducting hands-on science experiment with safety equipment in modern lab" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/spiritual.jpg" alt="Students enjoying creative activities in art class" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/character.jpg" alt="Students performing in drama production on stage" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/family.jpg" alt="Diverse group of students with face paint at school sports event" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/diversity.jpg" alt="Happy family celebrating student achievement with certificate" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/attention.jpg" alt="His Church School students in uniforms enjoying outdoor activities on campus" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="12" data-prefix="1-">1-12</div>
+                        <div class="stat-label">Grade Levels</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="15" data-suffix="+">15+</div>
+                        <div class="stat-label">Years of Excellence</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="100" data-suffix="%">100%</div>
+                        <div class="stat-label">Faith-Based Education</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="15" data-suffix=":1">15:1</div>
+                        <div class="stat-label">Student-Teacher Ratio</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="values">
+            <div class="container">
+                <div class="values-header">
+                    <div class="section-subtitle">Our Core Values</div>
+                    <h2>Raising Decision Makers, World Shakers & Challenge Takers</h2>
+                    <p>At His Church School, we focus on developing the whole child through our commitment to excellence in education, spiritual growth, and character formation.</p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+                            </svg>
+                        </div>
+                        <h3>Academic Excellence</h3>
+                        <p>Our CAPS-aligned curriculum prepares students for the National Senior Certificate while integrating a biblical worldview into every subject.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/>
+                            </svg>
+                        </div>
+                        <h3>Spiritual Formation</h3>
+                        <p>Daily devotionals, weekly chapel services, and discipleship groups help students develop a personal relationship with God.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                            </svg>
+                        </div>
+                        <h3>Character Development</h3>
+                        <p>We instill integrity, respect, responsibility, and compassion through community service and leadership opportunities.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                            </svg>
+                        </div>
+                        <h3>Family Partnership</h3>
+                        <p>We partner with families to build a supportive, faith-filled community where children thrive spiritually, academically, and socially through shared values and encouragement.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3>Cultural Diversity</h3>
+                        <p>We embrace students from diverse backgrounds and celebrate each child's unique God-given identity and potential.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                        <h3>Individual Attention</h3>
+                        <p>Small class sizes allow our dedicated teachers to provide personalized learning experiences for every student.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <div class="testimonials-header">
+                    <div class="section-subtitle">Testimonials</div>
+                    <h2>What Our Families Say</h2>
+                    <p>Hear from parents and students about their experience at His Church School.</p>
+                </div>
+                
+                <div class="testimonials-container">
+                    <div class="testimonial">
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <div class="testimonial-text">
+                            <span class="quote">"</span>We're so grateful for His Church School. The teachers genuinely care for every child and guide them with faith and grace. Our daughter has thrived both spiritually and academically in this Christ-centered, family-like community.<span class="quote">"</span>
+                        </div>
+                        <div class="testimonial-author">Sarah M.</div>
+                        <div class="testimonial-role">Parent of Grade 5 Student</div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <div class="testimonial-text">
+                            <span class="quote">"</span>The small class sizes mean our son gets individual attention and the teachers really know him. The biblical foundation integrated throughout every subject has helped him develop both academically and spiritually.<span class="quote">"</span>
+                        </div>
+                        <div class="testimonial-author">John & Lisa K.</div>
+                        <div class="testimonial-role">Parents of Grade 8 Student</div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <div class="testimonial-text">
+                            <span class="quote">"</span>Choosing His Church School was the best decision we made for our children. The sense of community here is incredible. Our kids love going to school each day and are growing into confident, compassionate young people.<span class="quote">"</span>
+                        </div>
+                        <div class="testimonial-author">David & Rachel P.</div>
+                        <div class="testimonial-role">Parents of Grade 3 & Grade 10 Students</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="application">
+            <div class="container">
+                <div class="application-header">
+                    <h2>2026 Enrolments Now Open</h2>
+                    <p>Join our vibrant community of learners. We are now accepting applications for the 2026 academic year.</p>
+                </div>
+
+                <div class="application-grid">
+                    <div class="application-info">
+                        <h3>Why Choose Us?</h3>
+                        
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <div class="info-item-content">
+                                <h4>Independent Christian School</h4>
+                                <p>Faith-based education integrated into every aspect of student life</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <div class="info-item-content">
+                                <h4>NSC Exam Centre</h4>
+                                <p>Officially registered as a National Senior Certificate exam centre</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <div class="info-item-content">
+                                <h4>CAPS Aligned Curriculum</h4>
+                                <p>Fully compliant with South Africa's national curriculum standards</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <div class="info-item-content">
+                                <h4>Small Class Sizes</h4>
+                                <p>15:1 student-teacher ratio for personalized attention</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <div class="info-item-content">
+                                <h4>Grades 1-12</h4>
+                                <p>Complete primary and secondary education pathway</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="application-form">
+                        <h3>Enquiry Form</h3>
+                        <form action="https://formsubmit.co/ha.vivian@yahoo.com" method="POST" id="applicationForm">
+                            <input type="hidden" name="_subject" value="New Enquiry from His Church School Website">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="https://www.hischurchschool.co.za/thank-you.html">
+                            <input type="text" name="_honey" style="position:absolute;left:-9999px;width:1px;height:1px" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="parentName">Parent/Guardian Name *</label>
+                                    <input type="text" id="parentName" name="Parent Guardian Name" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="Phone Number" required aria-required="true" placeholder="e.g., +27 31 701 6211">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="Email Address" required aria-required="true" placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="studentName">Student Name *</label>
+                                    <input type="text" id="studentName" name="Student Name" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="grade">Intended Grade *</label>
+                                    <select id="grade" name="Intended Grade" required aria-required="true">
+                                        <option value="">Select Grade</option>
+                                        <option value="Grade 1">Grade 1</option>
+                                        <option value="Grade 2">Grade 2</option>
+                                        <option value="Grade 3">Grade 3</option>
+                                        <option value="Grade 4">Grade 4</option>
+                                        <option value="Grade 5">Grade 5</option>
+                                        <option value="Grade 6">Grade 6</option>
+                                        <option value="Grade 7">Grade 7</option>
+                                        <option value="Grade 8">Grade 8</option>
+                                        <option value="Grade 9">Grade 9</option>
+                                        <option value="Grade 10">Grade 10</option>
+                                        <option value="Grade 11">Grade 11</option>
+                                        <option value="Grade 12">Grade 12</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message or Questions</label>
+                                <textarea id="message" name="Message" placeholder="Tell us about your interest in His Church School..."></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Submit Enquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-section">
+                        <h3>Get in Touch</h3>
+                        
+                        <div class="contact-item">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+27317016211" rel="noopener">+27 31 701 6211</a></p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>Email</h4>
+                            <p><a href="mailto:secretary@hischurchschool.co.za" rel="noopener">secretary@hischurchschool.co.za</a></p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>Location</h4>
+                            <p>
+                                13 Drake Road<br>
+                                Cowies Hill Park<br>
+                                Pinetown, KZN 3610
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-section">
+                        <h3>School Hours</h3>
+                        
+                        <div class="contact-item">
+                            <h4>Office Hours</h4>
+                            <p>
+                                Monday – Friday<br>
+                                7:30 AM – 3:30 PM
+                            </p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>School Hours</h4>
+                            <p>8:00 AM – 2:30 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-section">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="https://www.youtube.com/@HisChurchTV" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/hischurchschool/" target="_blank" rel="noopener noreferrer" aria-label="Visit His Church School on Facebook">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/hischurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:secretary@hischurchschool.co.za" rel="noopener" aria-label="Email">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container" style="text-align: center;">
+            <p>&copy; <span id="currentYear"></span> His Church School. All rights reserved.<span class="mobile-break"><br></span> <span class="footer-goal">Our Goal is to Please Him.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset > 100;
+            document.body.classList.toggle('scrolled', scrolled);
+        });
+
+        // ==== PROFESSIONAL STATS COUNTER ANIMATION ====
+        // Inspired by premium counter widgets with smooth easing
+        let statsAnimating = false;
+
+        class CounterAnimation {
+            constructor(element, target, duration, prefix = '', suffix = '') {
+                this.element = element;
+                this.target = target;
+                this.duration = duration;
+                this.prefix = prefix;
+                this.suffix = suffix;
+                this.startTime = null;
+                this.startValue = 0;
+                this.currentValue = 0;
+                // Calculate animation speed to ensure all finish at same time
+                this.animationSpeed = target / duration; // numbers per millisecond
+            }
+            
+            // Professional easing function - ease out quart (very smooth deceleration)
+            easeOutQuart(t) {
+                return 1 - Math.pow(1 - t, 4);
+            }
+            
+            // Format number with smooth rounding
+            formatNumber(value) {
+                return Math.round(value);
+            }
+            
+            // Animation loop
+            animate(currentTime) {
+                if (!this.startTime) this.startTime = currentTime;
+                
+                const elapsed = currentTime - this.startTime;
+                const progress = Math.min(elapsed / this.duration, 1);
+                
+                // Use linear progression to ensure all animations finish simultaneously
+                const newValue = this.startValue + (this.target - this.startValue) * progress;
+                
+                // Always update for smoother animation (removes judder)
+                const displayValue = this.formatNumber(newValue);
+                this.element.textContent = this.prefix + displayValue + this.suffix;
+                
+                // Continue or finish
+                if (progress < 1) {
+                    requestAnimationFrame((time) => this.animate(time));
+                } else {
+                    // Ensure exact final value
+                    this.element.textContent = this.prefix + this.target + this.suffix;
+                    this.element.classList.remove('counting');
+                    this.element.classList.add('complete');
+                }
+            }
+            
+            start() {
+                this.element.classList.add('counting');
+                this.element.classList.remove('complete');
+                requestAnimationFrame((time) => this.animate(time));
+            }
+        }
+
+        function startStatsAnimation() {
+            if (statsAnimating) return;
+            statsAnimating = true;
+            
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const animations = [];
+            const fixedDuration = 2500; // Fixed duration for all animations
+            
+            // Create all animation instances
+            statNumbers.forEach((stat) => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                const prefix = stat.getAttribute('data-prefix') || '';
+                const suffix = stat.getAttribute('data-suffix') || '';
+                
+                // Create counter animation instance with fixed duration
+                const counter = new CounterAnimation(stat, target, fixedDuration, prefix, suffix);
+                animations.push(counter);
+            });
+            
+            // Start ALL animations simultaneously
+            animations.forEach(counter => counter.start());
+            
+            // Reset the animating flag after animation completes
+            setTimeout(() => {
+                statsAnimating = false;
+            }, fixedDuration + 500); // Slightly longer than animation duration
+        }
+
+        // Intersection Observer for stats section
+        const statsSection = document.querySelector('#stats');
+        if (statsSection) {
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !statsAnimating) {
+                        // Smooth fade-in for stat items
+                        document.querySelectorAll('.stat-item').forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('visible');
+                            }, index * 50); // Slight stagger for fade-in only
+                        });
+                        
+                        // Start counter animations all together
+                        setTimeout(startStatsAnimation, 300);
+                    } else if (!entry.isIntersecting) {
+                        // Reset stat items when scrolling away
+                        document.querySelectorAll('.stat-item').forEach((item) => {
+                            item.classList.remove('visible');
+                        });
+                        
+                        // Reset counter numbers to initial state
+                        document.querySelectorAll('.stat-number').forEach((stat) => {
+                            const prefix = stat.getAttribute('data-prefix') || '';
+                            const suffix = stat.getAttribute('data-suffix') || '';
+                            stat.textContent = prefix + '0' + suffix;
+                            stat.classList.remove('counting', 'complete');
+                        });
+                    }
+                });
+            }, {
+                threshold: 0.2,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            statsObserver.observe(statsSection);
+        }
+
+        // General observer for animated elements (excluding stats)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements (NOTE: stat-item is NOT included - it has its own observer above)
+        document.querySelectorAll('.welcome-image, .welcome-content, .value-card, .gallery-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        function getHeaderOffset() {
+            const wrapper = document.querySelector('.header-wrapper');
+            const h = wrapper ? wrapper.getBoundingClientRect().height : 100;
+            return h;
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - getHeaderOffset();
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            mobileMenuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            menuToggle.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+        
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        /* Carousel code removed - single video only */
+
+        // Fix for mobile viewport height (address bar)
+        function setVH() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+
+        // Set on load and resize
+        setVH();
+        window.addEventListener('resize', setVH);
+        window.addEventListener('orientationchange', () => {
+            setTimeout(setVH, 100);
+        });
+
+        // ==== COMPREHENSIVE VIDEO HERO INITIALIZATION ====
+        // Select videos
+        const heroVideoDesktop = document.querySelector('.hero-video-desktop');
+        const heroVideoMobile = document.querySelector('.hero-video-mobile');
+        const heroVideos = [heroVideoDesktop, heroVideoMobile].filter(v => v);
+        
+        if (heroVideos.length > 0) {
+            let videoInitialized = false;
+            let playButtonCreated = false;
+            
+            // Function to get the currently visible video
+            function getActiveVideo() {
+                if (window.innerWidth <= 768) {
+                    return heroVideoMobile;
+                } else {
+                    return heroVideoDesktop;
+                }
+            }
+            // Function to create play button overlay
+            function createPlayButton() {
+                if (playButtonCreated) return;
+                playButtonCreated = true;
+                
+                const playButton = document.createElement('button');
+                playButton.innerHTML = '▶ Play Video';
+                playButton.setAttribute('aria-label', 'Play hero video');
+                playButton.className = 'video-play-button';
+                playButton.style.cssText = `
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 20;
+                    background: rgba(255,255,255,0.95);
+                    color: #09243f;
+                    padding: 15px 35px;
+                    border: none;
+                    border-radius: 50px;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    cursor: pointer;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                    transition: all 0.3s ease;
+                    font-family: inherit;
+                `;
+                
+                playButton.addEventListener('click', () => {
+                    const activeVideo = getActiveVideo();
+                    activeVideo.play().then(() => {
+                        playButton.remove();
+                        playButtonCreated = false;
+                    }).catch(err => {
+                        console.log('Play failed:', err);
+                    });
+                });
+                
+                playButton.addEventListener('mouseenter', () => {
+                    playButton.style.background = 'rgba(255,255,255,1)';
+                    playButton.style.transform = 'translate(-50%, -50%) scale(1.05)';
+                });
+                
+                playButton.addEventListener('mouseleave', () => {
+                    playButton.style.background = 'rgba(255,255,255,0.95)';
+                    playButton.style.transform = 'translate(-50%, -50%) scale(1)';
+                });
+                
+                document.querySelector('.hero-video-slide').appendChild(playButton);
+            }
+            
+            // Function to show fallback image
+            function showFallbackImage() {
+                const videoSlide = document.querySelector('.hero-video-slide');
+                if (videoSlide) {
+                    videoSlide.style.backgroundImage = 'url(images/hero1.jpg)';
+                    videoSlide.style.backgroundSize = 'cover';
+                    videoSlide.style.backgroundPosition = 'center';
+                    const videoContainer = videoSlide.querySelector('.hero-video');
+                    if (videoContainer) videoContainer.style.display = 'none';
+                }
+            }
+            
+            // Function to ensure video plays
+            function ensureVideoPlays(video) {
+                if (!video) return;
+                
+                console.log('Initializing video playback for:', video.className);
+                
+                // Set video properties BEFORE play to avoid seeking flash
+                if (video.duration > 3) {
+                    video.currentTime = 3; // Skip first 3 seconds
+                }
+                video.playbackRate = 0.8; // Slow down to 80% speed
+                
+                // Attempt to play
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        console.log('Video autoplay successful for:', video.className);
+                    }).catch(err => {
+                        console.log('Video autoplay prevented:', err);
+                        createPlayButton();
+                    });
+                }
+            }
+            
+            // Initialize both videos
+            heroVideos.forEach(video => {
+                // Custom loop: restart at 3 seconds instead of 0
+                video.addEventListener('timeupdate', () => {
+                    if (video.currentTime >= video.duration - 0.1) {
+                        video.currentTime = 3;
+                    }
+                });
+                
+                video.addEventListener('loadedmetadata', () => {
+                    if (video === getActiveVideo() && !videoInitialized) {
+                        videoInitialized = true;
+                        ensureVideoPlays(video);
+                    }
+                });
+                
+                video.addEventListener('canplay', () => {
+                    if (video === getActiveVideo() && !videoInitialized) {
+                        videoInitialized = true;
+                        ensureVideoPlays(video);
+                    }
+                });
+                
+                video.addEventListener('error', (e) => {
+                    console.error('Video error:', e, video.className);
+                    if (video === getActiveVideo()) {
+                        showFallbackImage();
+                    }
+                });
+            });
+            
+            // Handle visibility change
+            document.addEventListener('visibilitychange', () => {
+                const activeVideo = getActiveVideo();
+                if (document.hidden) {
+                    activeVideo.pause();
+                } else if (videoInitialized) {
+                    activeVideo.play().catch(err => {
+                        console.log('Resume play failed:', err);
+                        if (!playButtonCreated) createPlayButton();
+                    });
+                }
+            });
+            
+            // Handle window resize
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    const activeVideo = getActiveVideo();
+                    const previousVideo = window.innerWidth <= 768 ? heroVideoDesktop : heroVideoMobile;
+                    
+                    // Pause the previous video
+                    if (previousVideo && !previousVideo.paused) {
+                        previousVideo.pause();
+                    }
+                    
+                    // Play the active video
+                    if (activeVideo && videoInitialized) {
+                        activeVideo.play().catch(() => {
+                            if (!playButtonCreated) createPlayButton();
+                        });
+                    }
+                }, 250);
+            });
+            
+            // Force load appropriate video
+            if (window.innerWidth <= 768 && heroVideoMobile) {
+                heroVideoMobile.load();
+            } else if (heroVideoDesktop) {
+                heroVideoDesktop.load();
+            }
+        }
+
+        const form = document.getElementById('applicationForm');
+
+        function validateField(field) {
+            const value = (field.value || '').trim();
+            let valid = true;
+            if (!value) valid = false;
+            if (valid && field.type === 'email') {
+                valid = /.+@.+\..+/.test(value);
+            }
+            field.classList.toggle('is-invalid', !valid);
+            return valid;
+        }
+
+        form.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('blur', () => validateField(field));
+            field.addEventListener('input', () => {
+                if (field.classList.contains('is-invalid')) validateField(field);
+            });
+        });
+
+        form.addEventListener('submit', function(e) {
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            let firstInvalidField = null;
+
+            requiredFields.forEach(field => {
+                const fieldValid = validateField(field);
+                if (!fieldValid) {
+                    isValid = false;
+                    if (!firstInvalidField) firstInvalidField = field;
+                }
+            });
+
+            if (!isValid) {
+                e.preventDefault();
+                if (firstInvalidField) {
+                    firstInvalidField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    firstInvalidField.focus();
+                }
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            const submitBtn = form.querySelector('.submit-btn');
+            submitBtn.innerHTML = 'Sending... <span style="display:inline-block;width:16px;height:16px;border:2px solid white;border-top-color:transparent;border-radius:50%;animation:spinner 0.6s linear infinite;margin-left:8px;"></span>';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.6';
+            submitBtn.style.cursor = 'not-allowed';
+        });
+
+        // Dynamic copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
