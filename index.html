@@ -1127,13 +1127,9 @@
             font-size: 0.95rem;
             color: var(--text-light);
             margin: 0;
-            max-width: 100%; /* Changed from 60ch */
-            width: 100%;
+            max-width: 60ch;
             margin-left: auto;
             margin-right: auto;
-            text-wrap: balance;
-            word-wrap: break-word;
-            white-space: nowrap; /* Keep on one line for desktop */
         }
 
         #application {
@@ -1571,12 +1567,6 @@
         }
 
 
-        /* Tablet and smaller - allow text wrapping */
-        @media (max-width: 1024px) {
-            .testimonial-role {
-                white-space: normal; /* Allow wrapping on tablet and mobile */
-            }
-        }
 
         @media (max-width: 768px) {
             .hero-video {
