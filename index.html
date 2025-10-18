@@ -509,12 +509,7 @@
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
             -webkit-backface-visibility: hidden;
-            opacity: 0; /* Start invisible */
-            transition: opacity 1s ease-in; /* Fade in when ready */
-        }
-        
-        .hero-video video.loaded {
-            opacity: 1; /* Fade in when video is ready */
+            opacity: 1; /* Show immediately - no fade */
         }
 
         /* Desktop video: show on desktop/tablet, hide on mobile */
@@ -2697,14 +2692,13 @@ All rights reserved.
                 if (playPromise !== undefined) {
                     playPromise.then(() => {
                         console.log('Video autoplay successful for:', video.className);
-                        // Fade in video when it starts playing
-                        video.classList.add('loaded');
+                        // Video shows immediately - no fade needed
                         if (video.duration > 3) {
                             video.currentTime = 3;
                         }
                     }).catch(err => {
                         console.log('Video autoplay prevented:', err);
-                        // Still show the poster image if autoplay fails
+                        // Show play button if autoplay fails
                         createPlayButton();
                     });
                 }
