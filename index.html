@@ -922,17 +922,6 @@
             transform: scale(1);
         }
 
-        /* Smooth fade-in animation for stat items */
-        .stat-item {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .stat-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
 
         .stat-label {
             font-size: 1.1rem;
@@ -2042,19 +2031,19 @@
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-item">
-                        <div class="stat-number" data-target="12" data-prefix="1-">1-12</div>
+                        <div class="stat-number" data-target="12" data-prefix="1-">1-0</div>
                         <div class="stat-label">Grade Levels</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number" data-target="15" data-suffix="+">15+</div>
+                        <div class="stat-number" data-target="15" data-suffix="+">0</div>
                         <div class="stat-label">Years of Excellence</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number" data-target="100" data-suffix="%">100%</div>
+                        <div class="stat-number" data-target="100" data-suffix="%">0</div>
                         <div class="stat-label">Faith-Based Education</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number" data-target="15" data-suffix=":1">15:1</div>
+                        <div class="stat-number" data-target="15" data-suffix=":1">0</div>
                         <div class="stat-label">Student-Teacher Ratio</div>
                     </div>
                 </div>
@@ -2450,6 +2439,7 @@ All rights reserved.
         function startStatsAnimation() {
             if (statsAnimating) return;
             statsAnimating = true;
+            console.log('Starting stats animation');
             
             const statNumbers = document.querySelectorAll('.stat-number');
             const animations = [];
@@ -2475,6 +2465,7 @@ All rights reserved.
         if (statsSection) {
             const statsObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
+                    console.log('Stats section intersection:', entry.isIntersecting);
                     if (entry.isIntersecting && !statsAnimating) {
                         document.querySelectorAll('.stat-item').forEach((item, index) => {
                             setTimeout(() => {
