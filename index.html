@@ -40,8 +40,8 @@
     <link rel="preload" as="image" href="images/hcs_logo.png">
     <link rel="preload" as="image" href="images/hero1.jpg">
     <!-- Preload hero videos for faster playback -->
-    <link rel="preload" as="video" href="images/hero_video_1920x1080.mp4" media="(min-width: 769px)">
-    <link rel="preload" as="video" href="images/hero_video_mobile.mp4" media="(max-width: 768px)">
+    <link rel="preload" as="video" href="images/hero_video_1920x1080.mp4" media="(min-width: 769px)" type="video/mp4">
+    <link rel="preload" as="video" href="images/hero_video_mobile.mp4" media="(max-width: 768px)" type="video/mp4">
     
     <style>
         * {
@@ -515,6 +515,17 @@
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
             -webkit-backface-visibility: hidden;
+            filter: contrast(1.1) saturate(1.1);
+            transition: opacity 0.3s ease;
+        }
+
+        /* Video loading state */
+        .hero-video video:not([data-loaded="true"]) {
+            opacity: 0;
+        }
+
+        .hero-video video[data-loaded="true"] {
+            opacity: 1;
         }
 
         /* Desktop video: show on desktop/tablet, hide on mobile */
@@ -1949,7 +1960,7 @@
                         muted 
                         loop 
                         playsinline 
-                        preload="metadata"
+                        preload="auto"
                         poster="images/hero1.jpg"
                         aria-label="Hero background video"
                         style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
@@ -1965,7 +1976,7 @@
                         muted 
                         loop 
                         playsinline 
-                        preload="metadata"
+                        preload="auto"
                         poster="images/hero1.jpg"
                         aria-label="Hero background video"
                         style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
@@ -2801,6 +2812,39 @@ All rights reserved.
         });
 
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // ==== VIDEO LOADING OPTIMIZATION ====
+        function optimizeVideoLoading() {
+            const videos = document.querySelectorAll('.hero-video video');
+            
+            videos.forEach(video => {
+                // Add loading event listeners
+                video.addEventListener('loadstart', () => {
+                    console.log('Video loading started');
+                });
+                
+                video.addEventListener('canplay', () => {
+                    video.setAttribute('data-loaded', 'true');
+                    console.log('Video can play');
+                });
+                
+                video.addEventListener('error', (e) => {
+                    console.error('Video loading error:', e);
+                    // Fallback to poster image
+                    video.style.display = 'none';
+                });
+                
+                // Force video to start loading
+                video.load();
+            });
+        }
+
+        // Initialize video optimization when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', optimizeVideoLoading);
+        } else {
+            optimizeVideoLoading();
+        }
     </script>
 </body>
 </html>
