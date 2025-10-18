@@ -1125,13 +1125,6 @@
             text-wrap: balance;
         }
 
-        /* Ensure testimonial role text stays on one line */
-        .testimonial-role[style*="white-space: nowrap"] {
-            text-wrap: nowrap !important;
-            white-space: nowrap !important;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
 
         #application {
             background: linear-gradient(135deg, #10243e 0%, #10243e 100%);
@@ -1567,18 +1560,6 @@
             }
         }
 
-        /* Tablet-specific styles */
-        @media (max-width: 1024px) and (min-width: 769px) {
-            /* Ensure testimonial role text stays on one line on tablet */
-            .testimonial-role[style*="white-space: nowrap"] {
-                font-size: 0.9rem !important;
-                text-wrap: nowrap !important;
-                white-space: nowrap !important;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                max-width: 100% !important;
-            }
-        }
 
         @media (max-width: 768px) {
             .hero-video {
@@ -1586,15 +1567,6 @@
                 background: #000;
             }
             
-            /* Ensure testimonial role text stays on one line on mobile */
-            .testimonial-role[style*="white-space: nowrap"] {
-                font-size: 0.85rem !important;
-                text-wrap: nowrap !important;
-                white-space: nowrap !important;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                max-width: 100% !important;
-            }
             
             #hero {
                 height: calc(100vh - var(--header-height)) !important;
@@ -2217,7 +2189,7 @@
                             <span class="quote">"</span>Choosing His Church School was the best decision we made for our children. The sense of community here is incredible. Our kids love going to school each day and are growing into confident, compassionate young&nbsp;people.<span class="quote">"</span>
                         </div>
                         <div class="testimonial-author">David & Rachel P.</div>
-                        <div class="testimonial-role" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%;">Parents of Grade 3 & Grade 10 Students</div>
+                        <div class="testimonial-role">Parents of Grade 3 & Grade 10 Students</div>
                     </div>
                 </div>
             </div>
