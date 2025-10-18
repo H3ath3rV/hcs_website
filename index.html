@@ -38,6 +38,10 @@
     
     <!-- Preload critical resources -->
     <link rel="preload" as="image" href="images/hcs_logo.png">
+    <link rel="preload" as="image" href="images/hero1.jpg">
+    <!-- Preload hero videos for faster playback -->
+    <link rel="preload" as="video" href="images/hero_video_1920x1080.mp4" media="(min-width: 769px)">
+    <link rel="preload" as="video" href="images/hero_video_mobile.mp4" media="(max-width: 768px)">
     
     <style>
         * {
@@ -519,7 +523,6 @@
         /* Optimize video quality for different screen sizes */
         @media (min-width: 1920px) {
             .hero-video video {
-                /* For 4K screens, use the 4K video source */
                 object-fit: cover;
                 object-position: center center;
             }
@@ -527,7 +530,6 @@
 
         @media (min-width: 2560px) {
             .hero-video video {
-                /* For very large screens, ensure 4K video fills properly */
                 object-fit: cover;
                 object-position: center center;
             }
@@ -1941,7 +1943,7 @@
 
     <main id="main-content" role="main">
         <section id="hero">
-            <!-- Video hero - Facebook embed -->
+            <!-- Video hero -->
             <div class="hero-slide hero-video-slide" aria-label="Hero video">
                 <div class="hero-video" aria-hidden="true">
                     <!-- Desktop/Tablet Video (768px and above) -->
@@ -1951,28 +1953,28 @@
                         muted 
                         loop 
                         playsinline 
-                        preload="auto"
+                        preload="metadata"
+                        poster="images/hero1.jpg"
                         aria-label="Hero background video"
                         style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
-                        <!-- 4K video for large screens (1920px+) -->
-                        <source media="(min-width: 1920px)" src="images/hero_video_4k.mp4" type="video/mp4">
-                        <!-- 1080p video for smaller screens -->
+                        <!-- Compressed MP4 for universal browser support -->
                         <source src="images/hero_video_1920x1080.mp4" type="video/mp4">
-                        <!-- Fallback for browsers that don't support video -->
                         Your browser does not support the video tag.
                     </video>
                     
                     <!-- Mobile Video (below 768px) -->
                     <video 
                         class="hero-video-mobile"
-                        src="images/hero_video_mobile.mp4" 
                         autoplay 
                         muted 
                         loop 
                         playsinline 
-                        preload="auto"
+                        preload="metadata"
+                        poster="images/hero1.jpg"
                         aria-label="Hero background video"
                         style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
+                        <!-- Compressed MP4 for mobile devices -->
+                        <source src="images/hero_video_mobile.mp4" type="video/mp4">
                     </video>
 
                 </div>
@@ -1984,10 +1986,6 @@
                 </div>
             </div>
                 </div>
-            
-            <!-- Progress bar removed -->
-
-            
         </section>
 
         <section id="welcome">
@@ -2181,7 +2179,7 @@
                             <span class="quote">"</span>Choosing His Church School was the best decision we made for our children. The sense of community here is incredible. Our kids love going to school each day and are growing into confident, compassionate young&nbsp;people.<span class="quote">"</span>
                         </div>
                         <div class="testimonial-author">David & Rachel P.</div>
-                        <div class="testimonial-role" style="white-space: nowrap;">Parents of Grade 3 & Grade 10 Students</div>
+                        <div class="testimonial-role">Parents of Grade 3 & Grade 10 Students</div>
                     </div>
                 </div>
             </div>
@@ -2399,7 +2397,6 @@ All rights reserved.
         });
 
         // ==== PROFESSIONAL STATS COUNTER ANIMATION ====
-        // Inspired by premium counter widgets with smooth easing
         let statsAnimating = false;
 
         class CounterAnimation {
@@ -2412,39 +2409,31 @@ All rights reserved.
                 this.startTime = null;
                 this.startValue = 0;
                 this.currentValue = 0;
-                // Calculate animation speed to ensure all finish at same time
-                this.animationSpeed = target / duration; // numbers per millisecond
+                this.animationSpeed = target / duration;
             }
             
-            // Professional easing function - ease out quart (very smooth deceleration)
             easeOutQuart(t) {
                 return 1 - Math.pow(1 - t, 4);
             }
             
-            // Format number with smooth rounding
             formatNumber(value) {
                 return Math.round(value);
             }
             
-            // Animation loop
             animate(currentTime) {
                 if (!this.startTime) this.startTime = currentTime;
                 
                 const elapsed = currentTime - this.startTime;
                 const progress = Math.min(elapsed / this.duration, 1);
                 
-                // Use linear progression to ensure all animations finish simultaneously
                 const newValue = this.startValue + (this.target - this.startValue) * progress;
                 
-                // Always update for smoother animation (removes judder)
                 const displayValue = this.formatNumber(newValue);
                 this.element.textContent = this.prefix + displayValue + this.suffix;
                 
-                // Continue or finish
                 if (progress < 1) {
                     requestAnimationFrame((time) => this.animate(time));
                 } else {
-                    // Ensure exact final value
                     this.element.textContent = this.prefix + this.target + this.suffix;
                     this.element.classList.remove('counting');
                     this.element.classList.add('complete');
@@ -2464,50 +2453,41 @@ All rights reserved.
             
             const statNumbers = document.querySelectorAll('.stat-number');
             const animations = [];
-            const fixedDuration = 2500; // Fixed duration for all animations
+            const fixedDuration = 2500;
             
-            // Create all animation instances
             statNumbers.forEach((stat) => {
                 const target = parseInt(stat.getAttribute('data-target'));
                 const prefix = stat.getAttribute('data-prefix') || '';
                 const suffix = stat.getAttribute('data-suffix') || '';
                 
-                // Create counter animation instance with fixed duration
                 const counter = new CounterAnimation(stat, target, fixedDuration, prefix, suffix);
                 animations.push(counter);
             });
             
-            // Start ALL animations simultaneously
             animations.forEach(counter => counter.start());
             
-            // Reset the animating flag after animation completes
             setTimeout(() => {
                 statsAnimating = false;
-            }, fixedDuration + 500); // Slightly longer than animation duration
+            }, fixedDuration + 500);
         }
 
-        // Intersection Observer for stats section
         const statsSection = document.querySelector('#stats');
         if (statsSection) {
             const statsObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting && !statsAnimating) {
-                        // Smooth fade-in for stat items
                         document.querySelectorAll('.stat-item').forEach((item, index) => {
                             setTimeout(() => {
                                 item.classList.add('visible');
-                            }, index * 50); // Slight stagger for fade-in only
+                            }, index * 50);
                         });
                         
-                        // Start counter animations all together
                         setTimeout(startStatsAnimation, 300);
                     } else if (!entry.isIntersecting) {
-                        // Reset stat items when scrolling away
                         document.querySelectorAll('.stat-item').forEach((item) => {
                             item.classList.remove('visible');
                         });
                         
-                        // Reset counter numbers to initial state
                         document.querySelectorAll('.stat-number').forEach((stat) => {
                             const prefix = stat.getAttribute('data-prefix') || '';
                             const suffix = stat.getAttribute('data-suffix') || '';
@@ -2524,7 +2504,6 @@ All rights reserved.
             statsObserver.observe(statsSection);
         }
 
-        // General observer for animated elements (excluding stats)
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -2539,7 +2518,6 @@ All rights reserved.
             });
         }, observerOptions);
 
-        // Observe elements (NOTE: stat-item is NOT included - it has its own observer above)
         document.querySelectorAll('.welcome-image, .welcome-content, .value-card, .gallery-item').forEach(el => {
             observer.observe(el);
         });
@@ -2597,23 +2575,18 @@ All rights reserved.
             }
         });
 
-        /* Carousel code removed - single video only */
-
-        // Fix for mobile viewport height (address bar)
         function setVH() {
             const vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
         }
 
-        // Set on load and resize
         setVH();
         window.addEventListener('resize', setVH);
         window.addEventListener('orientationchange', () => {
             setTimeout(setVH, 100);
         });
 
-        // ==== COMPREHENSIVE VIDEO HERO INITIALIZATION ====
-        // Select videos
+        // ==== VIDEO HERO INITIALIZATION ====
         const heroVideoDesktop = document.querySelector('.hero-video-desktop');
         const heroVideoMobile = document.querySelector('.hero-video-mobile');
         const heroVideos = [heroVideoDesktop, heroVideoMobile].filter(v => v);
@@ -2622,7 +2595,6 @@ All rights reserved.
             let videoInitialized = false;
             let playButtonCreated = false;
             
-            // Function to get the currently visible video
             function getActiveVideo() {
                 if (window.innerWidth <= 768) {
                     return heroVideoMobile;
@@ -2630,7 +2602,7 @@ All rights reserved.
                     return heroVideoDesktop;
                 }
             }
-            // Function to create play button overlay
+            
             function createPlayButton() {
                 if (playButtonCreated) return;
                 playButtonCreated = true;
@@ -2681,7 +2653,6 @@ All rights reserved.
                 document.querySelector('.hero-video-slide').appendChild(playButton);
             }
             
-            // Function to show fallback image
             function showFallbackImage() {
                 const videoSlide = document.querySelector('.hero-video-slide');
                 if (videoSlide) {
@@ -2693,23 +2664,20 @@ All rights reserved.
                 }
             }
             
-            // Function to ensure video plays
             function ensureVideoPlays(video) {
                 if (!video) return;
                 
                 console.log('Initializing video playback for:', video.className);
                 
-                // Set video properties BEFORE play to avoid seeking flash
-                if (video.duration > 3) {
-                    video.currentTime = 3; // Skip first 3 seconds
-                }
-                video.playbackRate = 0.8; // Slow down to 80% speed
+                video.playbackRate = 0.8;
                 
-                // Attempt to play
                 const playPromise = video.play();
                 if (playPromise !== undefined) {
                     playPromise.then(() => {
                         console.log('Video autoplay successful for:', video.className);
+                        if (video.duration > 3) {
+                            video.currentTime = 3;
+                        }
                     }).catch(err => {
                         console.log('Video autoplay prevented:', err);
                         createPlayButton();
@@ -2717,9 +2685,7 @@ All rights reserved.
                 }
             }
             
-            // Initialize both videos
             heroVideos.forEach(video => {
-                // Custom loop: restart at 3 seconds instead of 0
                 video.addEventListener('timeupdate', () => {
                     if (video.currentTime >= video.duration - 0.1) {
                         video.currentTime = 3;
@@ -2748,7 +2714,6 @@ All rights reserved.
                 });
             });
             
-            // Handle visibility change
             document.addEventListener('visibilitychange', () => {
                 const activeVideo = getActiveVideo();
                 if (document.hidden) {
@@ -2761,7 +2726,6 @@ All rights reserved.
                 }
             });
             
-            // Handle window resize
             let resizeTimeout;
             window.addEventListener('resize', () => {
                 clearTimeout(resizeTimeout);
@@ -2769,12 +2733,10 @@ All rights reserved.
                     const activeVideo = getActiveVideo();
                     const previousVideo = window.innerWidth <= 768 ? heroVideoDesktop : heroVideoMobile;
                     
-                    // Pause the previous video
                     if (previousVideo && !previousVideo.paused) {
                         previousVideo.pause();
                     }
                     
-                    // Play the active video
                     if (activeVideo && videoInitialized) {
                         activeVideo.play().catch(() => {
                             if (!playButtonCreated) createPlayButton();
@@ -2783,7 +2745,6 @@ All rights reserved.
                 }, 250);
             });
             
-            // Force load appropriate video
             if (window.innerWidth <= 768 && heroVideoMobile) {
                 heroVideoMobile.load();
             } else if (heroVideoDesktop) {
@@ -2841,7 +2802,6 @@ All rights reserved.
             submitBtn.style.cursor = 'not-allowed';
         });
 
-        // Dynamic copyright year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
