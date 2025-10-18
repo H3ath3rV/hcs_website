@@ -40,8 +40,8 @@
     <link rel="preload" as="image" href="images/hcs_logo.png">
     <link rel="preload" as="image" href="images/hero1.jpg">
     <!-- Preload hero videos for faster playback -->
-    <link rel="preload" as="video" href="images/hero_video_1920x1080.mp4" media="(min-width: 769px)" type="video/mp4">
-    <link rel="preload" as="video" href="images/hero_video_mobile.mp4" media="(max-width: 768px)" type="video/mp4">
+    <link rel="preload" as="video" href="images/hero_video_1920x1080.mp4" media="(min-width: 769px)">
+    <link rel="preload" as="video" href="images/hero_video_mobile.mp4" media="(max-width: 768px)">
     
     <style>
         * {
@@ -65,8 +65,6 @@
             margin: 0;
             padding: 0;
             background: #000;
-            overscroll-behavior: none;
-            -webkit-overflow-scrolling: touch;
         }
 
         body {
@@ -75,8 +73,6 @@
             color: var(--text-dark);
             background: #000;
             overflow-x: hidden;
-            overscroll-behavior: none;
-            -webkit-overflow-scrolling: touch;
             margin: 0;
             padding: 0;
         }
@@ -444,7 +440,6 @@
             min-height: calc(100dvh - var(--header-height));
             max-height: none;
             position: relative;
-            overflow: hidden;
             margin-top: var(--header-height);
             padding-top: 0;
             width: 100vw;                          /* full-bleed width */
@@ -476,8 +471,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            transform: translateZ(0);
-            -webkit-transform: translateZ(0);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -498,6 +491,7 @@
             z-index: 1;
             background: #000 url('images/hero1.jpg') center center;
             background-size: cover;
+            opacity: 1; /* Show background image immediately */
         }
 
         /* Base styles for both videos */
@@ -515,17 +509,12 @@
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
             -webkit-backface-visibility: hidden;
-            filter: contrast(1.1) saturate(1.1);
-            transition: opacity 0.3s ease;
+            opacity: 0; /* Start invisible */
+            transition: opacity 1s ease-in; /* Fade in when ready */
         }
-
-        /* Video loading state */
-        .hero-video video:not([data-loaded="true"]) {
-            opacity: 0;
-        }
-
-        .hero-video video[data-loaded="true"] {
-            opacity: 1;
+        
+        .hero-video video.loaded {
+            opacity: 1; /* Fade in when video is ready */
         }
 
         /* Desktop video: show on desktop/tablet, hide on mobile */
@@ -940,6 +929,17 @@
             transform: scale(1);
         }
 
+        /* Smooth fade-in animation for stat items */
+        .stat-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stat-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         .stat-label {
             font-size: 1.1rem;
@@ -1057,6 +1057,8 @@
             min-height: 400px;
             width: 100%;
             min-width: 0;
+            box-sizing: border-box; /* Ensure padding is included in width */
+            overflow: hidden; /* Prevent any content overflow */
         }
 
         .testimonial:hover {
@@ -1087,9 +1089,13 @@
             widows: 3;
             orphans: 3;
             text-wrap: pretty;
-            max-width: 60ch;
+            max-width: 100%; /* Changed from 60ch to 100% */
+            width: 100%; /* Ensure it uses full available width */
             margin-left: auto;
             margin-right: auto;
+            padding: 0 5px; /* Add small padding for safety */
+            word-wrap: break-word; /* Allow long words to break */
+            overflow-wrap: break-word; /* Ensure text wraps */
         }
 
         .testimonial-text .quote {
@@ -1110,22 +1116,25 @@
             font-size: 1.1rem;
             margin-bottom: 3px;
             margin-top: auto;
-            max-width: 60ch;
+            max-width: 100%; /* Changed from 60ch */
+            width: 100%;
             margin-left: auto;
             margin-right: auto;
+            word-wrap: break-word;
         }
 
         .testimonial-role {
             font-size: 0.95rem;
             color: var(--text-light);
             margin: 0;
-            max-width: 60ch;
+            max-width: 100%; /* Changed from 60ch */
+            width: 100%;
             margin-left: auto;
             margin-right: auto;
             text-wrap: balance;
+            word-wrap: break-word;
             white-space: nowrap; /* Keep on one line for desktop */
         }
-
 
         #application {
             background: linear-gradient(135deg, #10243e 0%, #10243e 100%);
@@ -1561,7 +1570,6 @@
             }
         }
 
-
         /* Tablet and smaller - allow text wrapping */
         @media (max-width: 1024px) {
             .testimonial-role {
@@ -1575,7 +1583,6 @@
                 overflow: hidden;
                 background: #000;
             }
-            
             
             #hero {
                 height: calc(100vh - var(--header-height)) !important;
@@ -1758,6 +1765,12 @@
             .testimonial {
                 padding: 30px 25px 25px 25px;
                 min-height: auto;
+            }
+            
+            .testimonial-text {
+                font-size: 1rem; /* Slightly smaller on mobile */
+                line-height: 1.7;
+                padding: 0 5px;
             }
 
             .contact-grid {
@@ -1972,7 +1985,7 @@
                         muted 
                         loop 
                         playsinline 
-                        preload="auto"
+                        preload="metadata"
                         poster="images/hero1.jpg"
                         aria-label="Hero background video"
                         style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
@@ -1988,7 +2001,7 @@
                         muted 
                         loop 
                         playsinline 
-                        preload="auto"
+                        preload="metadata"
                         poster="images/hero1.jpg"
                         aria-label="Hero background video"
                         style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
@@ -2061,19 +2074,19 @@
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-item">
-                        <div class="stat-number" data-target="12" data-prefix="1-">1-0</div>
+                        <div class="stat-number" data-target="12" data-prefix="1-">1-12</div>
                         <div class="stat-label">Grade Levels</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number" data-target="15" data-suffix="+">0</div>
+                        <div class="stat-number" data-target="15" data-suffix="+">15+</div>
                         <div class="stat-label">Years of Excellence</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number" data-target="100" data-suffix="%">0</div>
+                        <div class="stat-number" data-target="100" data-suffix="%">100%</div>
                         <div class="stat-label">Faith-Based Education</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number" data-target="15" data-suffix=":1">0</div>
+                        <div class="stat-number" data-target="15" data-suffix=":1">15:1</div>
                         <div class="stat-label">Student-Teacher Ratio</div>
                     </div>
                 </div>
@@ -2165,7 +2178,7 @@
                             <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                         </div>
                         <div class="testimonial-text">
-                            <span class="quote">"</span>We're so grateful for His Church School. The teachers genuinely care for every child and guide them with faith and grace. Our daughter has thrived both spiritually and academically in this Christ-centered, family-like&nbsp;community.<span class="quote">"</span>
+                            <span class="quote">"</span>We're so grateful for His Church School. The teachers genuinely care for every child and guide them with faith and grace. Our daughter has thrived both spiritually and academically in this Christ-centered, family-like community.<span class="quote">"</span>
                         </div>
                         <div class="testimonial-author">Sarah M.</div>
                         <div class="testimonial-role">Parent of Grade 5 Student</div>
@@ -2180,7 +2193,7 @@
                             <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                         </div>
                         <div class="testimonial-text">
-                            <span class="quote">"</span>The small class sizes mean our son gets individual attention and the teachers really know him. The biblical foundation integrated throughout every subject has helped him develop both academically and&nbsp;spiritually.<span class="quote">"</span>
+                            <span class="quote">"</span>The small class sizes mean our son gets individual attention and the teachers really know him. The biblical foundation integrated throughout every subject has helped him develop both academically and spiritually.<span class="quote">"</span>
                         </div>
                         <div class="testimonial-author">John & Lisa K.</div>
                         <div class="testimonial-role">Parents of Grade 8 Student</div>
@@ -2195,7 +2208,7 @@
                             <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                         </div>
                         <div class="testimonial-text">
-                            <span class="quote">"</span>Choosing His Church School was the best decision we made for our children. The sense of community here is incredible. Our kids love going to school each day and are growing into confident, compassionate young&nbsp;people.<span class="quote">"</span>
+                            <span class="quote">"</span>Choosing His Church School was the best decision we made for our children. The sense of community here is incredible. Our kids love going to school each day and are growing into confident, compassionate young people.<span class="quote">"</span>
                         </div>
                         <div class="testimonial-author">David & Rachel P.</div>
                         <div class="testimonial-role">Parents of Grade 3 & Grade 10 Students</div>
@@ -2469,7 +2482,6 @@ All rights reserved.
         function startStatsAnimation() {
             if (statsAnimating) return;
             statsAnimating = true;
-            console.log('Starting stats animation');
             
             const statNumbers = document.querySelectorAll('.stat-number');
             const animations = [];
@@ -2495,7 +2507,6 @@ All rights reserved.
         if (statsSection) {
             const statsObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    console.log('Stats section intersection:', entry.isIntersecting);
                     if (entry.isIntersecting && !statsAnimating) {
                         document.querySelectorAll('.stat-item').forEach((item, index) => {
                             setTimeout(() => {
@@ -2696,11 +2707,14 @@ All rights reserved.
                 if (playPromise !== undefined) {
                     playPromise.then(() => {
                         console.log('Video autoplay successful for:', video.className);
+                        // Fade in video when it starts playing
+                        video.classList.add('loaded');
                         if (video.duration > 3) {
                             video.currentTime = 3;
                         }
                     }).catch(err => {
                         console.log('Video autoplay prevented:', err);
+                        // Still show the poster image if autoplay fails
                         createPlayButton();
                     });
                 }
@@ -2824,39 +2838,6 @@ All rights reserved.
         });
 
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // ==== VIDEO LOADING OPTIMIZATION ====
-        function optimizeVideoLoading() {
-            const videos = document.querySelectorAll('.hero-video video');
-            
-            videos.forEach(video => {
-                // Add loading event listeners
-                video.addEventListener('loadstart', () => {
-                    console.log('Video loading started');
-                });
-                
-                video.addEventListener('canplay', () => {
-                    video.setAttribute('data-loaded', 'true');
-                    console.log('Video can play');
-                });
-                
-                video.addEventListener('error', (e) => {
-                    console.error('Video loading error:', e);
-                    // Fallback to poster image
-                    video.style.display = 'none';
-                });
-                
-                // Force video to start loading
-                video.load();
-            });
-        }
-
-        // Initialize video optimization when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', optimizeVideoLoading);
-        } else {
-            optimizeVideoLoading();
-        }
     </script>
 </body>
 </html>
