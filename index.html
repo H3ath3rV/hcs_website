@@ -1133,6 +1133,7 @@
             margin-right: auto;
             text-wrap: balance;
             word-wrap: break-word;
+            white-space: nowrap; /* Keep on one line for desktop */
         }
 
         #application {
@@ -1569,6 +1570,13 @@
             }
         }
 
+
+        /* Tablet and smaller - allow text wrapping */
+        @media (max-width: 1024px) {
+            .testimonial-role {
+                white-space: normal; /* Allow wrapping on tablet and mobile */
+            }
+        }
 
         @media (max-width: 768px) {
             .hero-video {
